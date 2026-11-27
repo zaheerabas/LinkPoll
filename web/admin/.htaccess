@@ -1,0 +1,22 @@
+# LinkPoll Admin (admin.link-poll.com) — only index.php and api.php are reachable
+DirectoryIndex index.php
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+<FilesMatch ".*">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^(index\.php|api\.php|robots\.txt|logo-icon\.png|)$">
+  Require all granted
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow, noarchive"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "no-referrer"
+</IfModule>

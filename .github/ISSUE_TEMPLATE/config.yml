@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Help Center
+    url: https://help.link-poll.com
+    about: Answers to common questions about using LinkPoll.
+  - name: Report a security issue
+    url: https://github.com/zaheerabas/LinkPoll/blob/main/SECURITY.md
+    about: Please don't open a public issue for security problems.

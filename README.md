@@ -1,5 +1,7 @@
 # LinkPoll
 
+[![Web](https://github.com/zaheerabas/LinkPoll/actions/workflows/web.yml/badge.svg)](https://github.com/zaheerabas/LinkPoll/actions/workflows/web.yml) [![Android](https://github.com/zaheerabas/LinkPoll/actions/workflows/android.yml/badge.svg)](https://github.com/zaheerabas/LinkPoll/actions/workflows/android.yml) [![Website](https://img.shields.io/website?url=https%3A%2F%2Flink-poll.com&label=link-poll.com)](https://link-poll.com)
+
 [LinkPoll](https://link-poll.com) is a social polling platform: create polls, share them anywhere, vote, see live results and discuss.
 
 This repository holds both apps:
@@ -26,6 +28,7 @@ poll/
 ├── app/                    Android app (Kotlin)
 ├── gradle/, *.gradle.kts   Android build
 ├── .env.example            Android API key template
+├── .github/                CI workflows, issue and PR templates
 └── web/                    Web platform
     ├── README.md           Web setup guide
     ├── docs/PLATFORM.md    Product, design system and code guide
@@ -46,6 +49,8 @@ poll/
 4. In `app/build.gradle.kts`, remove `signingConfig = signingConfigs.getByName("debugConfig")`.
 5. Run the app on an emulator or a physical device.
 
+Every push that touches the app is built by the **Android** workflow; the debug APK is attached to each run under *Artifacts*.
+
 ## Web platform
 
 **Tech:** PHP 8 (no framework), MySQL or SQLite via PDO, vanilla JavaScript single-page app, server-rendered pages for SEO and share previews, Google Analytics 4 and Microsoft Clarity with Consent Mode v2.
@@ -54,6 +59,10 @@ poll/
 
 **Run it:** copy `web/public/config.sample.php` to `config.php`, fill in your own values and follow **[web/README.md](web/README.md)**. Design rules and the code map are in **[web/docs/PLATFORM.md](web/docs/PLATFORM.md)**.
 
+## Contributing
+
+Issues and pull requests are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Questions about using LinkPoll: [Help Center](https://help.link-poll.com).
+
 ## Security
 
-Never commit secrets: `.env` and `web/public/config.php` are not in the repository.
+Please report vulnerabilities privately as described in [SECURITY.md](SECURITY.md). Never commit secrets: `.env` and `web/public/config.php` are git-ignored.

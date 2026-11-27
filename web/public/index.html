@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+<meta name="msvalidate.01" content="351B0E4747EA575289E9FF543C605491" />
+<!-- Google tag (Google Analytics 4: LinkPoll) — consent mode: EU/UK/CH asked first, see /consent.js -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],wait_for_update:500});
+  gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});
+  (function(){var m=document.cookie.match(/(?:^|; )lp_consent=(granted|denied)/);if(m)gtag('consent','update',{analytics_storage:m[1]});})();
+  gtag('js', new Date());
+  gtag('config', 'G-PS3P2BVFB0');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PS3P2BVFB0"></script>
+  
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LinkPoll — the world's opinion, live</title>
+  <meta name="description" content="A social network built entirely around polls. Ask the world anything." />
+  <meta property="og:title" content="LinkPoll — the world's opinion, live" />
+  <meta property="og:description" content="Create polls in seconds. Share with anyone. See results in real time." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="og-image.jpg" />
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="manifest" href="manifest.php" />
+  <meta name="theme-color" content="#f3f1ea" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="LinkPoll" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <!-- apply the theme (saved, else the device's light/dark setting) + status-bar colour before first paint -->
+  <script>try{
+    var t=localStorage.getItem('lp_theme');
+    if(t==null && window.matchMedia){ t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'; }
+    if(t==='dark') document.documentElement.dataset.theme='dark';
+    var mc=document.querySelector('meta[name="theme-color"]');
+    if(mc) mc.setAttribute('content', t==='dark' ? '#0f0f12' : '#f3f1ea');
+    var sb=document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+    if(sb) sb.setAttribute('content', t==='dark' ? 'black-translucent' : 'default');
+  }catch(e){}</script>
+  <style>
+    /* ---- Splash screen (shows instantly, before app.css/app.js) ---- */
+    #splash{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;
+      background:#f3f1ea;transition:opacity .45s ease,visibility .45s ease}
+    html[data-theme="dark"] #splash{background:#0f0f12}
+    #splash.hide{opacity:0;visibility:hidden;pointer-events:none}
+    .splash-inner{display:flex;flex-direction:column;align-items:center;text-align:center;
+      animation:splPop .55s cubic-bezier(.2,1,.3,1) both}
+    .splash-logo{width:88px;height:88px;border-radius:22px;display:block}
+    .splash-name{margin-top:14px;font:800 30px system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+      letter-spacing:-.02em;color:#15140f}
+    html[data-theme="dark"] .splash-name{color:#fff}
+    .splash-tag{margin-top:2px;font:600 14px system-ui,sans-serif;color:#8a8578}
+    .splash-spin{margin-top:22px;width:30px;height:30px;border-radius:50%;
+      border:3px solid rgba(0,0,0,.12);border-top-color:#a7d825;animation:splSpin .8s linear infinite}
+    html[data-theme="dark"] .splash-spin{border-color:rgba(255,255,255,.14);border-top-color:#a7d825}
+    @keyframes splSpin{to{transform:rotate(360deg)}}
+    @keyframes splPop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:none}}
+    @media (prefers-reduced-motion:reduce){.splash-inner,.splash-spin{animation:none}}
+  </style>
+  <link rel="stylesheet" href="app.css?v=120" />
+  <meta name="keywords" content="polls, poll maker, create a poll, voting, surveys, quizzes, opinion, social polls, live polls, LinkPoll" />
+  <meta property="og:site_name" content="LinkPoll" />
+  <meta name="twitter:site" content="@linkpoll" />
+  <link rel="canonical" href="https://link-poll.com/" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"LinkPoll","alternateName":"Link Poll",
+   "url":"https://link-poll.com/","description":"LinkPoll is a social network built entirely around polls. Create a poll in seconds, share it with anyone, and see live results.",
+   "potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://link-poll.com/explore?q={search_term_string}"},"query-input":"required name=search_term_string"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"LinkPoll","url":"https://link-poll.com/",
+   "logo":"https://link-poll.com/icon-512.png","email":"info@link-poll.com",
+   "description":"A social network built entirely around polls. Ask the world anything and see what people really think."}
+  </script>
+<!-- Microsoft Clarity -->
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","zk2ft7o3v3");
+(function(){var m=document.cookie.match(/(?:^|; )lp_consent=(granted|denied)/),tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';}catch(e){}var eu=/^(Europe\/|Atlantic\/(Reykjavik|Canary|Madeira|Azores|Faroe))/.test(tz),v=m?m[1]:(eu?'denied':'');if(v)clarity('consentv2',{ad_Storage:'denied',analytics_Storage:v});})();</script>
+<script src="/consent.js" defer></script>
+</head>
+<body>
+  <div id="splash">
+    <div class="splash-inner">
+      <img src="logo-icon.png" alt="" class="splash-logo" />
+      <div class="splash-name">LinkPoll</div>
+      <div class="splash-tag">The world's opinion, live</div>
+      <div class="splash-spin"></div>
+    </div>
+  </div>
+  <div id="root"></div>
+  <noscript>
+    <div style="max-width:720px;margin:40px auto;padding:0 20px;font-family:system-ui,sans-serif;line-height:1.6;color:#15140f">
+      <h1>LinkPoll — the world's opinion, live</h1>
+      <p>LinkPoll is a social network built entirely around polls. Create a poll in seconds, share it with anyone, and watch the results update in real time. Ask the world anything — from quick yes/no questions to quizzes, image polls, ratings and full surveys — and see what people really think.</p>
+      <h2>What you can do on LinkPoll</h2>
+      <ul>
+        <li>Create rich polls: simple, yes/no, quiz, image, rating, this-or-that and surveys.</li>
+        <li>Vote and see live results as others join in.</li>
+        <li>Join communities around your interests.</li>
+        <li>Take quizzes, keep a daily streak, and earn points, levels and badges.</li>
+        <li>Teachers can build Mock Papers (MCQ tests) and share them with students.</li>
+      </ul>
+      <p>LinkPoll works best with JavaScript enabled. Learn more:</p>
+      <p>
+        <a href="/help">Help Center</a> · <a href="/about">About</a> · <a href="/updates">What's New</a> ·
+        <a href="/explore">Explore polls</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a> · <a href="/guidelines">Community Guidelines</a>
+      </p>
+    </div>
+  </noscript>
+  <div id="overlay"></div>
+  <nav class="tabbar" id="tabbar"></nav>
+  <div class="toast" id="toast"></div>
+  <script src="app.js?v=117"></script>
+  <!-- failsafe: never let the splash get stuck if something is slow -->
+  <script>setTimeout(function(){var s=document.getElementById('splash');if(s)s.classList.add('hide');},7000);</script>
+</body>
+</html>

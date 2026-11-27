@@ -1,0 +1,42 @@
+name: Web
+
+on:
+  push:
+    branches: [main]
+    paths: ["web/**", ".github/workflows/web.yml"]
+  pull_request:
+    paths: ["web/**", ".github/workflows/web.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: PHP & JS syntax
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          tools: none
+
+      - name: Lint PHP
+        run: |
+          status=0
+          while IFS= read -r -d '' f; do
+            php -l "$f" > /dev/null || status=1
+          done < <(find web -name '*.php' -print0)
+          exit $status
+
+      - name: Check JavaScript
+        run: |
+          for f in web/public/*.js; do node --check "$f"; done
+
+      - name: Make sure no secrets are committed
+        run: |
+          if [ -f web/public/config.php ]; then
+            echo "::error::web/public/config.php must not be committed"; exit 1
+          fi

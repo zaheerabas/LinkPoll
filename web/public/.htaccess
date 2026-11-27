@@ -1,0 +1,49 @@
+DirectoryIndex view.php index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # force HTTPS + non-www
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://link-poll.com%{REQUEST_URI} [L,R=301]
+
+  # --- Help Center, About & Policies, Developers and Status live on subdomains ---
+  RewriteRule ^help/?$ https://help.link-poll.com/ [R=301,L]
+  RewriteRule ^about/?$ https://about.link-poll.com/ [R=301,L]
+  RewriteRule ^(privacy|privacy-policy)/?$ https://about.link-poll.com/policies/privacy [R=301,L]
+  RewriteRule ^terms/?$ https://about.link-poll.com/policies/terms [R=301,L]
+  RewriteRule ^(guidelines|rules|community-guidelines)/?$ https://about.link-poll.com/policies/community-guidelines [R=301,L]
+  RewriteRule ^cookies/?$ https://about.link-poll.com/policies/cookies [R=301,L]
+  RewriteRule ^contact/?$ https://about.link-poll.com/contact [R=301,L]
+  RewriteRule ^status/?$ https://status.link-poll.com/ [R=301,L]
+  RewriteRule ^(developers|docs)/?$ https://docs.link-poll.com/ [R=301,L]
+  # --- never rewrite real files, folders, or the API ---
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # --- clean, SEO-friendly URLs -> the SSR front controller ---
+  #   /            home          /username    profile
+  #   /p/CODE      poll          /c/slug      community
+  #   /t/tag       tag           /explore ... app pages
+  RewriteRule ^$ view.php?lp_path= [L,QSA]
+  RewriteRule ^(.+)$ view.php?lp_path=$1 [L,QSA]
+</IfModule>
+
+# Hide config + any SQLite file from the web
+<FilesMatch "(^config\.php$|\.sqlite)">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+</IfModule>
+
+# Block logs, backups, SQL and docs
+<FilesMatch "(error_log|\.(bak|sql|md|log|tar|gz|zip))$">
+  Require all denied
+</FilesMatch>

@@ -16,3 +16,15 @@
 local.properties
 .env
 debug.keystore
+
+# Build outputs
+/.build-outputs/
+*.apk
+*.aab
+
+# Web: secrets and runtime data
+web/public/config.php
+web/public/uploads/
+web/**/cache/
+error_log
+*.log

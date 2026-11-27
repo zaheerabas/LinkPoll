@@ -1,0 +1,36 @@
+name: Bug report
+description: Something on LinkPoll (web or Android) isn't working
+labels: [bug]
+body:
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where
+      options: [Website (link-poll.com), Android app, Help / About / Docs / Status site]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to ...
+        2. Tap ...
+        3. See ...
+  - type: input
+    id: env
+    attributes:
+      label: Device and browser / Android version
+      placeholder: e.g. Pixel 7, Android 15 — or Chrome 131 on Windows
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or links
+      description: Please remove any personal information first.

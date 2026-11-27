@@ -1,6 +1,6 @@
 # LinkPoll
 
-[![Web](https://github.com/zaheerabas/LinkPoll/actions/workflows/web.yml/badge.svg)](https://github.com/zaheerabas/LinkPoll/actions/workflows/web.yml) [![Android](https://github.com/zaheerabas/LinkPoll/actions/workflows/android.yml/badge.svg)](https://github.com/zaheerabas/LinkPoll/actions/workflows/android.yml) [![Website](https://img.shields.io/website?url=https%3A%2F%2Flink-poll.com&label=link-poll.com)](https://link-poll.com)
+[![Web](https://github.com/zaheerabas/LinkPoll/actions/workflows/web.yml/badge.svg)](https://github.com/zaheerabas/LinkPoll/actions/workflows/web.yml) [![Android](https://github.com/zaheerabas/LinkPoll/actions/workflows/android.yml/badge.svg)](https://github.com/zaheerabas/LinkPoll/actions/workflows/android.yml)
 
 [LinkPoll](https://link-poll.com) is a social polling platform: create polls, share them anywhere, vote, see live results and discuss.
 

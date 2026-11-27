@@ -46,8 +46,6 @@ LinkPoll
 Sub-pages highlight their parent in the menu (`NAV_ALIAS` in app.js):
 `leaderboard → Points & badges`, `tag / discover → Explore`, `c → Communities`, `paper → Mock Papers`.
 
-Moderation is **not** part of the member app. It lives only in the separate admin panel: https://admin.link-poll.com.
-
 ---
 
 ## 3. Layout rules (desktop ≥ 1101 px)
@@ -195,8 +193,6 @@ Every URL is rendered by `view.php` + `seo.php` before the app boots, so crawler
 | `public/sitemap.php` | XML sitemap of indexable URLs |
 | `public/og.php` | 1200×630 share and results images (GD) |
 | `public/consent.js` | Cookie consent for all LinkPoll sites |
-| `lp-admin/` | Admin library: auth, roles, audit (`lib.php`), the hook included by the public API (`hook.php`), user behaviour (`behaviour*.php`), site analytics (`analytics*.php`), demo seed |
-| `admin/` | Admin panel (owner & team only) |
 | `lp-site/` | Engine and content for help., about., docs. and status. subdomains |
 
 ### Deploy checklist
@@ -217,14 +213,7 @@ Every URL is rendered by `view.php` + `seo.php` before the app boots, so crawler
 - ✅ Add a new page → give it **one** place in `navList()` (or reach it from its parent page) and an alias if it's a sub-page.
 - ✅ New right-column card → it must relate to what's in the centre, and go below Trending/Live.
 - ❌ Don't use lime for anything other than the main action.
-- ❌ Don't put moderation tools in the member app.
 - ❌ Don't hard-code colours, radii or shadows — use the tokens.
-
-## Admin panel
-
-- **Roles:** owner, admin, moderator, analyst — each with its own permissions. Every write needs the right role, a CSRF token and is written to the audit log.
-- **User behaviour:** Needs review (risk score from limit hits, blocked links, reports, blocks, warnings, shared networks), Activity, Restrictions (switch off one action — post, vote, comment, message, follow, like, report — for a set time without suspending), Blocked actions, Rules & limits (hourly limits, stricter limits for new accounts, link rules, optional automatic restriction). Enforced for every member request by `lp-admin/hook.php` → `behaviour.php`.
-- **Site analytics:** Google Search Console, Google Analytics 4, Microsoft Clarity, UptimeRobot and Bing Webmaster data in one place. Keys are pasted under Connections, stored server-side and never sent to the browser; results are cached (Clarity allows only 10 API calls a day).
 
 ## Sites (subdomains)
 

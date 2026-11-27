@@ -7,7 +7,7 @@ This repository holds both apps:
 | Part | What | Folder |
 |---|---|---|
 | **Android app** | Native app in Kotlin | `app/` (+ Gradle files at the root) |
-| **Web platform** | link-poll.com, the admin panel, and the Help, About, Developers and Status sites | `web/` |
+| **Web platform** | link-poll.com and the Help, About, Developers and Status sites | `web/` |
 
 ## Live
 
@@ -18,7 +18,6 @@ This repository holds both apps:
 | About & Policies | [about.link-poll.com](https://about.link-poll.com) |
 | Developers | [docs.link-poll.com](https://docs.link-poll.com) |
 | Status | [status.link-poll.com](https://status.link-poll.com) |
-| Admin (team only) | admin.link-poll.com |
 
 ## Repository layout
 
@@ -31,8 +30,6 @@ poll/
     ├── README.md           Web setup guide
     ├── docs/PLATFORM.md    Product, design system and code guide
     ├── public/             link-poll.com (PHP API, single-page app, SEO pages)
-    ├── admin/              admin.link-poll.com panel
-    ├── lp-admin/           Admin library: roles, audit, user behaviour, site analytics
     ├── lp-site/            Engine and content for the help/about/docs/status sites
     └── subdomains/         Entry points for each subdomain
 ```
@@ -53,10 +50,10 @@ poll/
 
 **Tech:** PHP 8 (no framework), MySQL or SQLite via PDO, vanilla JavaScript single-page app, server-rendered pages for SEO and share previews, Google Analytics 4 and Microsoft Clarity with Consent Mode v2.
 
-**Features:** feeds (For You, Following, Trending, New, Live), polls with images and live results, comments, messages, communities, quizzes and mock papers, points and badges, link in bio, embeddable widgets, insights, guest voting, cookie consent, and an admin panel with roles, audit log, user behaviour rules and a site analytics dashboard (Search Console, GA4, Clarity, UptimeRobot, Bing).
+**Features:** feeds (For You, Following, Trending, New, Live), polls with images and live results, comments, messages, communities, quizzes and mock papers, points and badges, link in bio, embeddable widgets, insights, guest voting and cookie consent.
 
 **Run it:** copy `web/public/config.sample.php` to `config.php`, fill in your own values and follow **[web/README.md](web/README.md)**. Design rules and the code map are in **[web/docs/PLATFORM.md](web/docs/PLATFORM.md)**.
 
 ## Security
 
-Never commit secrets: `.env` and `web/public/config.php` are not in the repository. Admin analytics keys are entered in the admin panel and stored in the database, not in files.
+Never commit secrets: `.env` and `web/public/config.php` are not in the repository.

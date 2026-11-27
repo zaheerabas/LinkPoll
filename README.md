@@ -1,21 +1,25 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# LinkPoll for Android
 
-# Run and deploy your AI Studio app
+Android app for [LinkPoll](https://link-poll.com), a social polling platform: create polls, share them, vote, and see the results.
 
-This contains everything you need to run your app locally.
+> **Status:** early-stage Android project, built in Kotlin with Android Studio.
 
-View your app in AI Studio: https://ai.studio/apps/e9e35d70-fb99-48d0-baaf-d8bbd9bc674b
+## Tech
 
-## Run Locally
+- Kotlin, Android SDK
+- Gradle (Kotlin DSL)
+- Gemini API
 
-**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
+## Run locally
 
+**You need:** Android Studio
 
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
-6. Run the app on an emulator or physical device
+1. Clone the repo, open Android Studio, choose **Open** and select the project folder.
+2. Let Android Studio fix any compatibility issues while it imports the project.
+3. Copy `.env.example` to `.env` and set `GEMINI_API_KEY` to your Gemini API key.
+4. In `app/build.gradle.kts`, remove `signingConfig = signingConfigs.getByName("debugConfig")`.
+5. Run the app on an emulator or a physical device.
+
+## Links
+
+- Web app: [link-poll.com](https://link-poll.com)

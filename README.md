@@ -2,6 +2,8 @@
 
 [![Web](https://github.com/zaheerabas/LinkPoll/actions/workflows/web.yml/badge.svg)](https://github.com/zaheerabas/LinkPoll/actions/workflows/web.yml) [![Android](https://github.com/zaheerabas/LinkPoll/actions/workflows/android.yml/badge.svg)](https://github.com/zaheerabas/LinkPoll/actions/workflows/android.yml)
 
+[![Live](https://img.shields.io/badge/Live-link--poll.com-1F6FEB?style=flat-square&logo=googlechrome&logoColor=white)](https://link-poll.com) ![Type](https://img.shields.io/badge/Our%20startup-555?style=flat-square) [![Built by](https://img.shields.io/badge/Built%20by-Zaheer%20Abbas-0A66C2?style=flat-square&logo=github&logoColor=white)](https://github.com/zaheerabas)
+
 [LinkPoll](https://link-poll.com) is a social polling platform: create polls, share them anywhere, vote, see live results and discuss.
 
 This repository holds both apps:
@@ -66,3 +68,7 @@ Issues and pull requests are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
 ## Security
 
 Please report vulnerabilities privately as described in [SECURITY.md](SECURITY.md). Never commit secrets: `.env` and `web/public/config.php` are git-ignored.
+
+---
+
+**Live:** [link-poll.com](https://link-poll.com) · Built by [Zaheer Abbas](https://github.com/zaheerabas) and the LinkPoll team · [LinkedIn](https://www.linkedin.com/in/iamzaheerabbas)
